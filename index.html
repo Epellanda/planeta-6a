@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planeta V ou F — Geografia 6º ano</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nuvens decorativas de fundo -->
+  <div class="ceu" aria-hidden="true">
+    <span class="nuvem nuvem1">☁️</span>
+    <span class="nuvem nuvem2">☁️</span>
+    <span class="nuvem nuvem3">☁️</span>
+    <span class="nuvem nuvem4">🛩️</span>
+  </div>
+
+  <header class="cabecalho">
+    <h1>🌍 Planeta V ou F</h1>
+    <p class="subtitulo">Geografia • 6º ano do Ensino Fundamental</p>
+  </header>
+
+  <main class="conteudo">
+
+    <!-- ================= TELA DE INÍCIO ================= -->
+    <section id="tela-inicio" class="tela cartao ativa" aria-labelledby="titulo-inicio">
+      <h2 id="titulo-inicio" class="titulo-tela">Você é bom de Geografia?</h2>
+      <p class="texto">
+        Leia cada afirmação sobre o nosso planeta e responda rápido:
+        ela é <strong>VERDADEIRA</strong> ou <strong>FALSA</strong>?
+      </p>
+
+      <div class="exemplo">
+        <span class="selo selo-v">V</span>
+        <span class="selo selo-f">F</span>
+      </div>
+
+      <ul class="regras">
+        <li>⏱️ Você tem <strong>15 segundos</strong> para cada pergunta.</li>
+        <li>❤️ Você começa com <strong>3 vidas</strong>. Errou ou demorou? Perde uma!</li>
+        <li>🏆 Quanto mais rápido acertar, <strong>mais pontos</strong> você ganha.</li>
+        <li>📚 São <strong>12 desafios</strong> sobre relevo, rios, biomas, mapas e muito mais.</li>
+      </ul>
+
+      <button id="botao-iniciar" class="botao botao-grande">▶ Começar a jogar</button>
+    </section>
+
+    <!-- ================= TELA DO JOGO ================= -->
+    <section id="tela-jogo" class="tela" aria-labelledby="titulo-jogo">
+      <h2 id="titulo-jogo" class="oculto">Desafio de Geografia</h2>
+
+      <div class="painel">
+        <div class="painel-item">
+          <span class="rotulo">Pontos</span>
+          <span id="pontos" class="valor">0</span>
+        </div>
+        <div class="painel-item">
+          <span class="rotulo">Vidas</span>
+          <span id="vidas" class="valor vidas">❤️❤️❤️</span>
+        </div>
+        <div class="painel-item">
+          <span class="rotulo">Pergunta</span>
+          <span id="contador" class="valor">1/12</span>
+        </div>
+      </div>
+
+      <div class="area-tempo">
+        <div class="barra-tempo">
+          <div id="tempo-preenchimento" class="barra-tempo-preenchimento"></div>
+        </div>
+        <span id="tempo-texto" class="tempo-texto">15s</span>
+      </div>
+
+      <div class="cartao-pergunta">
+        <p class="etiqueta">Verdadeiro ou Falso?</p>
+        <p id="afirmacao" class="afirmacao">Carregando afirmação...</p>
+      </div>
+
+      <div class="botoes-resposta">
+        <button id="botao-verdadeiro" class="botao botao-v">✔ VERDADEIRO</button>
+        <button id="botao-falso" class="botao botao-f">✘ FALSO</button>
+      </div>
+
+      <p class="dica-teclado">Dica: use as teclas <kbd>V</kbd> e <kbd>F</kbd> do teclado!</p>
+    </section>
+
+    <!-- ================= TELA FINAL ================= -->
+    <section id="tela-fim" class="tela cartao" aria-labelledby="titulo-fim">
+      <h2 id="titulo-fim" class="titulo-tela">Fim de jogo!</h2>
+
+      <p id="medalha" class="medalha">🏆</p>
+      <p id="titulo-final" class="titulo-final">Explorador do Planeta</p>
+
+      <p class="pontuacao-final">
+        Você fez <strong id="pontos-finais">0</strong> pontos
+      </p>
+      <p id="resumo-final" class="resumo-final"></p>
+
+      <button id="botao-reiniciar" class="botao botao-grande">🔄 Jogar de novo</button>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>Feito para aprender Geografia brincando 🌎</p>
+  </footer>
+
+  <!-- ================= FEEDBACK (aparece por cima) ================= -->
+  <div id="feedback" class="feedback oculto" role="status" aria-live="polite">
+    <div id="feedback-caixa" class="feedback-caixa">
+      <p id="feedback-icone" class="feedback-icone">✅</p>
+      <p id="feedback-titulo" class="feedback-titulo">Isso aí!</p>
+      <p id="feedback-explicacao" class="feedback-explicacao"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
